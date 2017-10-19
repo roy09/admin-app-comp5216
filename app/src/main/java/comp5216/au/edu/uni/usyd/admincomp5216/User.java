@@ -1,10 +1,12 @@
 package comp5216.au.edu.uni.usyd.admincomp5216;
 
+import java.io.Serializable;
+
 /**
  * Created by desktop on 19/10/2017.
  */
 
-public class User {
+public class User implements Serializable {
 
     public String name;
     public String image;

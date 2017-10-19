@@ -1,9 +1,11 @@
 package comp5216.au.edu.uni.usyd.admincomp5216;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -57,8 +59,18 @@ public class ChatDeployActivity extends AppCompatActivity {
             }
         });
 
+        mUsersListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+                User user = usersList.get(position);
+                Log.d("USR", user.getName());
 
-        
+                Intent intent = new Intent(ChatDeployActivity.this, UserGroupActivity.class);
+                intent.putExtra("user", user);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

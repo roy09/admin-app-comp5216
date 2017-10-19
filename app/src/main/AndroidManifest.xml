@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".EventsActivity" />
-        <activity android:name=".ChatDeployActivity"></activity>
+        <activity android:name=".ChatDeployActivity" />
+        <activity android:name=".UserGroupActivity"></activity>
     </application>
 
 </manifest>
