@@ -27,12 +27,6 @@ public class EventsActivity extends AppCompatActivity {
 
         mEventAdapter = new EventAdapter(this, R.layout.item_event, eventsList);
         mEventsListView.setAdapter(mEventAdapter);
-
-        mEventsListView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+        
     }
 }
