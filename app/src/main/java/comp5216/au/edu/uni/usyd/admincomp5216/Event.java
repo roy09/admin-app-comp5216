@@ -9,15 +9,17 @@ public class Event {
     String title;
     String locaiton;
     String desc;
+    String type;
 
     public Event(){
 
     }
 
-    public Event(String title, String locaiton, String desc){
+    public Event(String title, String locaiton, String type, String desc){
         this.title = title;
         this.locaiton = locaiton;
         this.desc = desc;
+        this.type = type;
     }
 
     public String getTitle() {

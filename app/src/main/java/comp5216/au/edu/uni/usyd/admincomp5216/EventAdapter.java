@@ -1,0 +1,34 @@
+package comp5216.au.edu.uni.usyd.admincomp5216;
+
+import android.app.Activity;
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+
+
+import java.util.List;
+
+public class EventAdapter extends ArrayAdapter<Event> {
+    public EventAdapter(Context context, int resource, List<Event> objects) {
+        super(context, resource, objects);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        if (convertView == null) {
+            convertView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.item_event, parent, false);
+        }
+
+//        TextView eventName = (TextView) convertView.findViewById(R.id.txtViewName);
+//        TextView eventLocation = (TextView) convertView.findViewById(R.id.txtViewNameLocation);
+//        TextView eventType = (TextView) convertView.findViewById(R.id.txtViewType);
+//
+//
+
+        return convertView;
+    }
+}
