@@ -13,6 +13,7 @@ public class User implements Serializable {
     public String status;
     public String thumb_image;
     public String group;
+    public String uid;
 
 
 
@@ -68,4 +69,11 @@ public class User implements Serializable {
         this.group = group;
     }
 
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
 }
