@@ -2,6 +2,7 @@ package comp5216.au.edu.uni.usyd.admincomp5216;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -24,8 +25,14 @@ public class EventsActivity extends AppCompatActivity {
         eventsList.add(new Event("Party at Manning", "Manning Bar", "Drinks on house", "Party"));
         eventsList.add(new Event("Trivia Night", "Manning Bar", "Drinks on house", "Party"));
 
-
         mEventAdapter = new EventAdapter(this, R.layout.item_event, eventsList);
         mEventsListView.setAdapter(mEventAdapter);
+
+        mEventsListView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 }
