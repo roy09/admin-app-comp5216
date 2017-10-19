@@ -4,7 +4,7 @@ package comp5216.au.edu.uni.usyd.admincomp5216;
  * Created by desktop on 19/10/2017.
  */
 
-public class Users {
+public class User {
 
     public String name;
     public String image;
@@ -14,15 +14,16 @@ public class Users {
 
 
 
-    public Users(){
+    public User(){
 
     }
 
-    public Users(String name, String image, String status, String thumb_image) {
+    public User(String name, String image, String status, String thumb_image) {
         this.name = name;
         this.image = image;
         this.status = status;
         this.thumb_image = thumb_image;
+        this.group = "";
     }
 
     public String getName() {
