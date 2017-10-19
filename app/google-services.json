@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "568361213552",
+    "firebase_url": "https://friendlychat-a0239.firebaseio.com",
+    "project_id": "friendlychat-a0239",
+    "storage_bucket": "friendlychat-a0239.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568361213552:android:64e58dacc0483faa",
+        "android_client_info": {
+          "package_name": "com.google.firebase.udacity.friendlychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568361213552-t0e56lk43qna6itubmori26v6ar011jb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.udacity.friendlychat",
+            "certificate_hash": "2cb3c0ce5323ee7415812bdaff2d8d956479e34f"
+          }
+        },
+        {
+          "client_id": "568361213552-2400r7p3qt59hvpu4q4ee6nf3jovs2af.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.udacity.friendlychat",
+            "certificate_hash": "34fe38c18de3a6acd2c6fb8c91f5fc6261d74760"
+          }
+        },
+        {
+          "client_id": "568361213552-et6pf97cogb0arvsnm1v00cha1hmn25k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnlULkv2Iw8Bbg01zHajU2lDKRTnfm03w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568361213552-et6pf97cogb0arvsnm1v00cha1hmn25k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568361213552:android:57ded4c753239f93",
+        "android_client_info": {
+          "package_name": "comp5216.au.edu.uni.usyd.admincomp5216"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568361213552-ov6tl0f3ernbf6v9opv2v3mv0e5jfejj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "comp5216.au.edu.uni.usyd.admincomp5216",
+            "certificate_hash": "34fe38c18de3a6acd2c6fb8c91f5fc6261d74760"
+          }
+        },
+        {
+          "client_id": "568361213552-et6pf97cogb0arvsnm1v00cha1hmn25k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnlULkv2Iw8Bbg01zHajU2lDKRTnfm03w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568361213552-et6pf97cogb0arvsnm1v00cha1hmn25k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
