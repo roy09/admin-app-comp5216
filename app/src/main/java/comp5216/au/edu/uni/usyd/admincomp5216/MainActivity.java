@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        mFirebaseAUth = FirebaseAuth.getInstance();
 
 
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
@@ -150,12 +150,12 @@ public class MainActivity extends AppCompatActivity {
         mUsername = ANONYMOUS;
     }
 
-    private void goEvents(View v){
+    public void goEvents(View v){
         Intent intent = new Intent(this, EventsActivity.class);
         startActivity(intent);
     }
 
-    private void goDeployChat(View v){
+    public void goDeployChat(View v){
         Intent intent = new Intent(this, ChatDeployActivity.class);
         startActivity(intent);
     }

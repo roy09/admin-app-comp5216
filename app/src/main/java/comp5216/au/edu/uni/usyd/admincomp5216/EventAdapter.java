@@ -23,11 +23,15 @@ public class EventAdapter extends ArrayAdapter<Event> {
             convertView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.item_event, parent, false);
         }
 
-//        TextView eventName = (TextView) convertView.findViewById(R.id.txtViewName);
-//        TextView eventLocation = (TextView) convertView.findViewById(R.id.txtViewNameLocation);
-//        TextView eventType = (TextView) convertView.findViewById(R.id.txtViewType);
-//
-//
+        TextView eventName = (TextView) convertView.findViewById(R.id.txtViewName);
+        TextView eventLocation = (TextView) convertView.findViewById(R.id.txtViewNameLocation);
+        TextView eventType = (TextView) convertView.findViewById(R.id.txtViewType);
+
+        Event event = getItem(position);
+
+        eventName.setText(event.getTitle());
+        eventLocation.setText(event.getLocaiton());
+        eventType.setText(event.getType());
 
         return convertView;
     }
