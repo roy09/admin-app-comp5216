@@ -36,9 +36,15 @@ public class UserGroupActivity extends AppCompatActivity {
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseReference mUserReference = FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid());
-                mUserReference.child("group").setValue(mEditTextUserGroup.getText().toString());
+                String userGroup = mEditTextUserGroup.getText().toString();
 
+                DatabaseReference mUserReference = FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid());
+                mUserReference.child("group").setValue(userGroup);
+
+//                Log.d("USER ID", user.getUid());
+//                 adding user's id to the group member list (for add as friend feature)
+                DatabaseReference mGroupMemberReference = FirebaseDatabase.getInstance().getReference().child("groups").child(userGroup);
+                mGroupMemberReference.child("members").push().setValue(user.getUid());
             }
         });
 
