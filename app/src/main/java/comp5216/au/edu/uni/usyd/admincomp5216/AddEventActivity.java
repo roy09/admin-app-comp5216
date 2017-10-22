@@ -1,5 +1,6 @@
 package comp5216.au.edu.uni.usyd.admincomp5216;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -43,6 +44,9 @@ public class AddEventActivity extends AppCompatActivity {
                 if(title != null && !title.isEmpty()){
                     Event event = new Event(title, locaiton, type, desc);
                     FirebaseDatabase.getInstance().getReference().child("Events").setValue(event);
+
+                    Intent intent = new Intent(AddEventActivity.this, EventsActivity.class);
+                    startActivity(intent);
                 } else{
                     Toast.makeText(AddEventActivity.this, "You need to give a title", Toast.LENGTH_SHORT).show();
                 }
