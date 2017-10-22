@@ -1,5 +1,6 @@
 package comp5216.au.edu.uni.usyd.admincomp5216;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,5 +29,10 @@ public class EventsActivity extends AppCompatActivity {
         mEventAdapter = new EventAdapter(this, R.layout.item_event, eventsList);
         mEventsListView.setAdapter(mEventAdapter);
         
+    }
+
+    public void addEvent(View view){
+        Intent intent = new Intent(this, AddEventActivity.class);
+        startActivity(intent);
     }
 }

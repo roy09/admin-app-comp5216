@@ -13,4 +13,13 @@
 
     </ListView>
 
+    <Button
+        android:id="@+id/btnAddNewEvent"
+        android:text="Add New Event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="addEvent"/>
+
 </RelativeLayout>
