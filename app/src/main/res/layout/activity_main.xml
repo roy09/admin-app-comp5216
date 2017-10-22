@@ -4,23 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/darkColor"
     tools:context="comp5216.au.edu.uni.usyd.admincomp5216.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scaleType="centerInside"
+        android:background="@drawable/bg"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/events"
         android:text="Events"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="goEvents"/>
+
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:onClick="goEvents"
+        android:layout_above="@+id/deployChat"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/deployChat"
         android:text="Deploy Chat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/events"
+
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/white"
+
+        android:onClick="goDeployChat"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="goDeployChat"/>
+        android:layout_marginBottom="24dp" />
 
 </RelativeLayout>
