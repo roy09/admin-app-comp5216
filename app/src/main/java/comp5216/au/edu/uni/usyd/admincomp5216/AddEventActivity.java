@@ -43,7 +43,7 @@ public class AddEventActivity extends AppCompatActivity {
 
                 if(title != null && !title.isEmpty()){
                     Event event = new Event(title, locaiton, type, desc);
-                    FirebaseDatabase.getInstance().getReference().child("Events").setValue(event);
+                    FirebaseDatabase.getInstance().getReference().child("Events").push().setValue(event);
 
                     Intent intent = new Intent(AddEventActivity.this, EventsActivity.class);
                     startActivity(intent);

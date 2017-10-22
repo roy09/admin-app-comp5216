@@ -6,6 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,12 +29,25 @@ public class EventsActivity extends AppCompatActivity {
         mEventsListView = (ListView) findViewById(R.id.listview);
 
         List<Event> eventsList = new ArrayList<>();
-        eventsList.add(new Event("Party at Manning", "Manning Bar", "Drinks on house", "Party"));
-        eventsList.add(new Event("Trivia Night", "Manning Bar", "Drinks on house", "Party"));
-
         mEventAdapter = new EventAdapter(this, R.layout.item_event, eventsList);
         mEventsListView.setAdapter(mEventAdapter);
-        
+
+        DatabaseReference mEventsReference = FirebaseDatabase.getInstance().getReference().child("Events");
+        mEventsReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot event: dataSnapshot.getChildren()){
+                    Event tempEvent = event.getValue(Event.class);
+                    mEventAdapter.add(tempEvent);
+                    mEventAdapter.notifyDataSetChanged();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     public void addEvent(View view){
