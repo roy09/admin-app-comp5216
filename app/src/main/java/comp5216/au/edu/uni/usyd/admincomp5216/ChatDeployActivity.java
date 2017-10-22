@@ -47,7 +47,7 @@ public class ChatDeployActivity extends AppCompatActivity {
                     User userObject = user.getValue(User.class);
                     usersList.add(userObject);
                     mUserAdapter.notifyDataSetChanged();
-                    Log.d("User", userObject.getName());
+//                    Log.d("User", userObject.getName());
 
                 }
 
